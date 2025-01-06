@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           return Card(
                             margin: const EdgeInsets.symmetric(vertical: 8.0),
                             child: ListTile(
-                              title: Text(schedule['schedulegit add ']),
+                              title: Text(schedule['schedule']),
                               subtitle: Text(
                                   schedule['description'] ?? 'No Description'),
                               trailing: Text(
