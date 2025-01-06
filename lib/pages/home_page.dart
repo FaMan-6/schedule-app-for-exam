@@ -44,7 +44,6 @@ class _HomePageState extends State<HomePage> {
       }).toList();
 
       // Urutkan jadwal berdasarkan waktu
-      
 
       return filteredSchedules;
     });
@@ -102,49 +101,49 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: SizedBox(
               height: 270,
-                child: TableCalendar(
-                  locale: "en_US",
-                  rowHeight: 30,
-                  focusedDay: _focusedDay,
-                  firstDay: DateTime(1950, 01, 01),
-                  lastDay: DateTime(2050, 12, 31),
-                  startingDayOfWeek: StartingDayOfWeek.monday,
-                  selectedDayPredicate: (day) {
-                    return isSameDay(_selectedDay, day);
-                  },
-                  headerStyle: const HeaderStyle(
-                    formatButtonVisible: false,
-                    titleCentered: true,
-                  ),
-                  daysOfWeekStyle: DaysOfWeekStyle(
-                    weekendStyle:
-                        TextStyle(color: Theme.of(context).colorScheme.error),
-                  ),
-                  calendarStyle: CalendarStyle(
-                    todayDecoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.primary,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    selectedDecoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.secondary,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    todayTextStyle: TextStyle(
-                      color: Theme.of(context).colorScheme.onSecondary,
-                    ),
-                    defaultDecoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    weekendDecoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  onDaySelected: _onDaySelected, // Menggunakan metode baru
+              child: TableCalendar(
+                locale: "en_US",
+                rowHeight: 30,
+                focusedDay: _focusedDay,
+                firstDay: DateTime(1950, 01, 01),
+                lastDay: DateTime(2050, 12, 31),
+                startingDayOfWeek: StartingDayOfWeek.monday,
+                selectedDayPredicate: (day) {
+                  return isSameDay(_selectedDay, day);
+                },
+                headerStyle: const HeaderStyle(
+                  formatButtonVisible: false,
+                  titleCentered: true,
                 ),
+                daysOfWeekStyle: DaysOfWeekStyle(
+                  weekendStyle:
+                      TextStyle(color: Theme.of(context).colorScheme.error),
+                ),
+                calendarStyle: CalendarStyle(
+                  todayDecoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.primary,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  selectedDecoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.secondary,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  todayTextStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
+                  defaultDecoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  weekendDecoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                onDaySelected: _onDaySelected, // Menggunakan metode baru
+              ),
             ),
           ),
           Expanded(
@@ -196,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           return Card(
                             margin: const EdgeInsets.symmetric(vertical: 8.0),
                             child: ListTile(
-                              title: ,
+                              title: Text(schedule['schedulegit add ']),
                               subtitle: Text(
                                   schedule['description'] ?? 'No Description'),
                               trailing: Text(
